@@ -1,7 +1,13 @@
 <?php
-define('HOST', '127.0.0.1');
-define('USUARIO', 'root');
-define('SENHA', 'canaltiyoutube');
-define('DB', 'login');
 
-$conexao = mysqli_connect(HOST, USUARIO, SENHA, DB) or die ('Não foi possível conectar');
+$host = "calcdemo.mysql.database.azure.com";
+$usuario = "adm@calcdemo";
+$senha = "111213calc@";
+$bd = "login";
+
+$mysqli = new mysqli($host, $usuario, $senha, $bd);
+
+if($mysqli->connect_errno)
+  echo "Falha na conexão: (".$mysqli->connect_errno.") ".$mysqli->connect_error;
+
+?>
